@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sangwonkrpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sangwonkrpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: sangwonkrpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: sangwonkrpipelinesjavascriptdocker 
+          image: user021acr.azurecr.io/sangwonkrpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
